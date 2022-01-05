@@ -24,20 +24,22 @@ class MyPlugin {
     }
 }
 
-const myPlugin = new MyPlugin();
+module.exports = MyPlugin;
 
-const options = {
-    plugins: [myPlugin]
-}
+// const myPlugin = new MyPlugin();
 
-let compiler = new Compiler();
+// const options = {
+//     plugins: [myPlugin]
+// }
 
-for(let plugin of options.plugins) {
-    if(typeof plugin === 'function') {
-        plugin.call(compiler, compiler)
-    } else {
-        plugin.apply(compiler);
-    }
-}
+// let compiler = new Compiler();
 
-compiler.run()
+// for(let plugin of options.plugins) {
+//     if(typeof plugin === 'function') {
+//         plugin.call(compiler, compiler)
+//     } else {
+//         plugin.apply(compiler);
+//     }
+// }
+
+// compiler.run()
